@@ -10,6 +10,16 @@ let divTouches = document.createElement('div');
 divTouches.classList.add('touches');
 divCalcu.appendChild(divTouches);
 
+
+let input = document.createElement('input');
+divEcran.appendChild(input);
+input.classList.add('input');
+
+
+
+
+
+
 let btn = document.createElement('button');
 
 
@@ -24,17 +34,53 @@ myTab.forEach(element => {
     i++
 });
 
-
-
-// for (let i = 0; i < 19; i++){
-//     bouton = document.createElement('button')
-//     bouton[0].textContent = "C";
-//     bouton.classList.add('bouton');
-//     divTouches.appendChild(bouton);
-
-
-
+divTouches.addEventListener('click', (e) =>{
     
-    // const xBoutons = divs[2].getElementsByTagName('button');
-// }
+        if(e.target.innerText == "0"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "1"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "2"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "3"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "4"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "5"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "6"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "7"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "8"){
+            input.value += parseInt(e.target.innerText);
+        }else if(e.target.innerText == "9"){
+            input.value += e.target.innerText;
+        }else if(e.target.innerText == "*") {
+            input.value += e.target.innerText;
+        }else if(e.target.innerText == "/"){
+            input.value += e.target.innerText;
+        }else if(e.target.innerText == "+"){
+            input.value += e.target.innerText;
+        }else if(e.target.innerText == "-"){
+            input.value += e.target.innerText;
+        }else if(e.target.innerText == "="){
+            input.value = Math.round(eval(input.value));
+        }else if(e.target.innerText == "("){
+            input.value += e.target.innerText;
+        }else if(e.target.innerText == ")"){
+            input.value += e.target.innerText;
+        }else{
+            input.value = "";
+        }
+    
+    });
+
+
+
+   
+
+
+
+
 
